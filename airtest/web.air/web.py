@@ -16,3 +16,7 @@ driver.find_element_by_xpath("//a[@href='http://sports.cctv.com/']").click()
 driver.switch_to_new_tab()
 
 
+
+from poco.drivers.android.uiautomation import AndroidUiautomationPocopoco("com.tencent.mm:id/an3")
+
+poco = AndroidUiautomationPoco(use_airtest_input=True, screenshot_each_action=False)
