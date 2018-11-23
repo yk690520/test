@@ -3,8 +3,8 @@
 from other_duty import create_flag, ding_flags_for_wechat, recharge, get_momo_picture, get_sign, update_asset,qr_distribution
 from airtest.core.android.constant import (DEFAULT_ADB_PATH, IP_PATTERN,
                                            SDK_VERISON_NEW)
-import os,traceback,shutil
-
+import os,logging,shutil
+logger=logging.Logger(__name__,logging.WARNING)
 while True:
     os.system("cls")
     print("请输入你要执行的功能：")
@@ -40,7 +40,7 @@ while True:
                     else:
                         ding_flags_for_wechat.ding_flags(tpath, "%s/打标签结果.xlsx" % path)
                 except BaseException as e:
-                    traceback.print_stack()
+                    logger.exception(e)
                     print("处理出错，错误信息已显示")
                 else:
                     os.system("cls")
@@ -73,7 +73,7 @@ while True:
                     else:
                         update_asset.update_asset(tpath, "%s/更新资产编号结果.xlsx" % path)
                 except BaseException as e:
-                    traceback.print_exc()
+                    logger.exception(e)
                     print("处理出错，错误信息已显示")
                 else:
                     os.system("cls")
@@ -99,7 +99,7 @@ while True:
                 try:
                     re= get_sign.get_sign(os.getcwd(), type)
                 except BaseException as e:
-                    traceback.print_stack()
+                    logger.exception(e)
                     print("处理出错，错误信息已显示")
                 else:
                     os.system('cls')
@@ -133,7 +133,7 @@ while True:
                 try:
                     re= get_momo_picture.getMomo("%s/陌陌图片" % path, "%s/陌陌链接存储.txt" % path)
                 except BaseException as e:
-                    traceback.print_stack()
+                    logger.exception(e)
                     print("处理出错，错误信息已显示")
                 else:
                     if re:
@@ -168,7 +168,7 @@ while True:
                     else:
                         update_asset.update_asset(tpath, "%s/增加标签结果.xlsx" % path)
                 except BaseException as e:
-                    traceback.print_stack()
+                    logger.exception(e)
                     print("处理出错，错误信息已显示")
                 else:
                     os.system("cls")
@@ -216,7 +216,7 @@ while True:
                     else:
                         recharge.recharge(tpath, "%s/充话费结果.xlsx" % path)
                 except BaseException as e:
-                    traceback.print_stack()
+                    logger.exception(e)
                     print("处理出错，错误信息已显示")
                 else:
                     os.system("cls")
@@ -252,7 +252,7 @@ while True:
                     else:
                         qr_distribution.distr_qr(tpath, "%s/二维码分配结果.xlsx" % path,"%s/待分配二维码" % path)
                 except BaseException as e:
-                    traceback.print_stack()
+                    logger.exception(e)
                     print("处理出错，错误信息已显示")
                 else:
                     os.system("cls")
