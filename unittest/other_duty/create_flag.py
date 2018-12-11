@@ -36,12 +36,25 @@ def __add_flag(brower:webdriver.Chrome,group,flag):
 def add_flags(sourcePath,logPath,*,data_list):
     group_and_flag_list=data_list
     #进入浏览器
+    address_list = ["http://console.zy.youkedao.com/login/", "http://console.yk.yijuchelian.com/login/"]
+    for i in range(0, len(address_list)):
+        print("【%s】 %s" % (i + 1, address_list[i]))
+    address = input("请选择或者直接输入后台网址：")
+    if address == "1":
+        address = address_list[0]
+    elif address == "2":
+        address = address_list[1]
+    elif "http" not in address:
+        print("输入网址不正确")
+        raise BaseException("输入网址不正确")
+    usernme = input("请输入账号：")
+    pwd = input("请输入密码：")
     brower = webdriver.Chrome()
     brower.maximize_window()
     brower.implicitly_wait(2)
-    brower.get('http://console.zy.youkedao.com/login/')
-    brower.find_element_by_xpath('//*[@id="userName"]').send_keys('18800010001')
-    brower.find_element_by_xpath('//*[@id="password"]').send_keys('abc123')
+    brower.get(address)
+    brower.find_element_by_xpath('//*[@id="userName"]').send_keys(usernme)
+    brower.find_element_by_xpath('//*[@id="password"]').send_keys(pwd)
     brower.find_element_by_xpath('/html/body/form/div/div[2]/div[4]/input').click()
     brower.find_element_by_xpath('//*[@id="side-menu"]/dl[7]/dd[1]/a').click()
     time.sleep(3)

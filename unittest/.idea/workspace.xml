@@ -3,8 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="7532fb6b-c8cf-4bf4-9f7a-4b1ff4b801d5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_duty/ding_flags_for_wechat.py" beforeDir="false" afterPath="$PROJECT_DIR$/other_duty/ding_flags_for_wechat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ui/base_library.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/ui/base_library.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ui/out00-Analysis.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/ui/out00-Analysis.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ui/out00-EXE.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/ui/out00-EXE.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ui/out00-PKG.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/build/ui/out00-PKG.pkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ui/out00-PKG.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/ui/out00-PKG.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ui/out00-PYZ.pyz" beforeDir="false" afterPath="$PROJECT_DIR$/build/ui/out00-PYZ.pyz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ui/out00-PYZ.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/ui/out00-PYZ.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ui/out02-Tree.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/ui/out02-Tree.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ui/out03-Tree.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/ui/out03-Tree.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ui/warnui.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/ui/warnui.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ui/xref-ui.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/ui/xref-ui.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/ui.exe" beforeDir="false" afterPath="$PROJECT_DIR$/dist/ui.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_duty/create_flag.py" beforeDir="false" afterPath="$PROJECT_DIR$/other_duty/create_flag.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,7 +26,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/unittest$Unittests_for__LoginCase_test_login_success.coverage" NAME="Unittests for 登录.LoginCase.test_login_success Coverage Results" MODIFIED="1536898197569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/unittest$Unittests_for__LoginCase_test_delate_baby.coverage" NAME="Unittests for 下架宝贝.LoginCase.test_delate_baby Coverage Results" MODIFIED="1535488999346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/unittest$ui.coverage" NAME="ui Coverage Results" MODIFIED="1542901993078" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/unittest$ui.coverage" NAME="ui Coverage Results" MODIFIED="1544170057177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/unittest$update_asset.coverage" NAME="update_asset Coverage Results" MODIFIED="1539146937490" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/unittest$phone.coverage" NAME="phone Coverage Results" MODIFIED="1539274490565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/unittest$create_flag.coverage" NAME="create_flag Coverage Results" MODIFIED="1539173393529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -32,7 +43,7 @@
     <session id="-1869849484">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="54" />
+          <entry key="project.closed" value="56" />
           <entry key="project.open.time.1" value="7" />
           <entry key="project.open.time.10" value="3" />
           <entry key="project.open.time.12" value="1" />
@@ -48,12 +59,14 @@
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.23" value="1" />
+          <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.26" value="3" />
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.32" value="1" />
+          <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="57" />
+          <entry key="project.opened" value="59" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -62,7 +75,7 @@
           <entry key="html" value="2" />
           <entry key="jpg" value="8" />
           <entry key="log" value="1" />
-          <entry key="py" value="138" />
+          <entry key="py" value="139" />
           <entry key="pyi" value="1" />
           <entry key="txt" value="1" />
         </counts>
@@ -72,20 +85,20 @@
           <entry key="HTML" value="2" />
           <entry key="Image" value="8" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="138" />
+          <entry key="Python" value="139" />
           <entry key="PythonStub" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="15" />
-          <entry key="py" value="21352" />
+          <entry key="py" value="21380" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="15" />
-          <entry key="Python" value="21352" />
+          <entry key="Python" value="21380" />
         </counts>
       </usages-collector>
     </session>
@@ -95,23 +108,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/other_duty/qr_distribution.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1243">
+            <state relative-caret-position="673">
               <caret line="80" column="17" selection-start-line="80" selection-start-column="17" selection-end-line="80" selection-end-column="17" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
                 <marker date="1540719736688" expanded="true" signature="153:158" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-              <folding>
-                <element signature="e#18#143#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -129,8 +130,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/other_duty/create_flag.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+            <state relative-caret-position="-505">
+              <caret line="37" column="10" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -138,8 +139,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/other_duty/ding_flags_for_wechat.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-171">
-              <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+            <state relative-caret-position="266">
+              <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -162,20 +163,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/other_duty/recharge.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="95">
-              <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+              <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/other_duty/update_asset.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="40" column="28" lean-forward="true" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/other_duty/update_asset.py">
+        <entry file="file://$PROJECT_DIR$/other_duty/登录.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+            <state relative-caret-position="247">
+              <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -241,7 +251,6 @@
         <option value="$PROJECT_DIR$/phone.py" />
         <option value="$PROJECT_DIR$/recharge.py" />
         <option value="$PROJECT_DIR$/myTest.py" />
-        <option value="$PROJECT_DIR$/other_duty/create_flag.py" />
         <option value="$PROJECT_DIR$/other_duty/decorator/decorator.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/other_duty/recharge.py" />
@@ -249,6 +258,7 @@
         <option value="$PROJECT_DIR$/other_duty/update_asset.py" />
         <option value="$PROJECT_DIR$/ui.py" />
         <option value="$PROJECT_DIR$/other_duty/ding_flags_for_wechat.py" />
+        <option value="$PROJECT_DIR$/other_duty/create_flag.py" />
       </list>
     </option>
   </component>
@@ -502,7 +512,7 @@
     <frame x="-6" y="24" width="1381" height="895" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21768707" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22373393" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -549,11 +559,6 @@
           <url>file://$PROJECT_DIR$/test.py</url>
           <line>6</line>
           <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/other_duty/update_asset.py</url>
-          <line>17</line>
-          <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -667,13 +672,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/other_duty/登录.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Program Files/Python36/Lib/site-packages/airtest/core/android/android.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -784,10 +782,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/other_duty/update_asset.py">
+    <entry file="file://$PROJECT_DIR$/ui.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+        <state relative-caret-position="665">
+          <caret line="38" column="52" selection-start-line="38" selection-start-column="52" selection-end-line="38" selection-end-column="52" />
+          <folding>
+            <element signature="e#18#143#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -798,16 +799,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/other_duty/get_sign.py">
+    <entry file="file://$PROJECT_DIR$/other_duty/登录.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+        <state relative-caret-position="247">
+          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/other_duty/recharge.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/other_duty/qr_distribution.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1243">
+        <state relative-caret-position="673">
           <caret line="80" column="17" selection-start-line="80" selection-start-column="17" selection-end-line="80" selection-end-column="17" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
@@ -816,13 +824,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui.py">
+    <entry file="file://$PROJECT_DIR$/other_duty/get_sign.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding>
-            <element signature="e#18#143#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="399">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -830,13 +835,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/other_duty/ding_flags_for_wechat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-171">
-          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -849,15 +847,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/other_duty/create_flag.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        <state relative-caret-position="-505">
+          <caret line="37" column="10" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/other_duty/recharge.py">
+    <entry file="file://$PROJECT_DIR$/other_duty/ding_flags_for_wechat.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+        <state relative-caret-position="266">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/other_duty/update_asset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="40" column="28" lean-forward="true" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
         </state>
       </provider>
     </entry>
