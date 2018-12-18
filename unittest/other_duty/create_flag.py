@@ -29,8 +29,6 @@ def __add_flag(brower:webdriver.Chrome,group,flag):
         brower.find_element_by_xpath('//td[@class="grouptype"][text()="%s"]/..//a[text()="+"]' % group).click()
         brower.find_element_by_xpath('//input[@class="layui-layer-input"]').send_keys(flag)
         brower.find_element_by_xpath('//a[@class="layui-layer-btn0"]').click()
-        # 完成一个标签的增加
-        pass
 
 @decorator_for_log_and_load_file(data_column=2,log_column_name=["标签","处理结果"])
 def add_flags(sourcePath,logPath,*,data_list):

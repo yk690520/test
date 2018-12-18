@@ -1,8 +1,11 @@
 '''
 需求说明：导入一个excel表格，表格表头：【资产编号，标签】，然后将其设置到后台，并输出未成功设置的资产编号。
 '''
-import openpyxl,time,traceback
+import openpyxl,time
 from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from other_duty.decorator.decorator import decorator_for_log_and_load_file
 
 @decorator_for_log_and_load_file(data_column=2,log_column_name=["资产编号","处理结果"])
@@ -24,7 +27,7 @@ def ding_flags(sourcePath,logPath,*,data_list):
     #进入浏览器
     brower = webdriver.Chrome()
     brower.maximize_window()
-    brower.implicitly_wait(15)
+    brower.implicitly_wait(1)
     brower.get(address)
     brower.find_element_by_xpath('//*[@id="userName"]').send_keys(usernme)
     brower.find_element_by_xpath('//*[@id="password"]').send_keys(pwd)
@@ -48,10 +51,8 @@ def ding_flags(sourcePath,logPath,*,data_list):
     brower.quit()
     #打标签结束，返回错误日志
     return log
-    pass
 
 def __ding_flags_for_wechat(brower,asset:str,flags:[]):
-
     '''
     这是一个为某一个具体的设备订标签的方法，如果传入的标签为None，那么将清除此设备的所有标签
     :param asset: 设备资产编号
@@ -78,8 +79,47 @@ def __ding_flags_for_wechat(brower,asset:str,flags:[]):
     # 点击change按钮
     brower.execute_script("$(arguments[0]).click()", change)
     for flag in flags:
-        brower.find_element_by_xpath('//span[@class="splitTags"][text()="%s"]' % flag).click()
+        __ding_flag(brower,flag)
+        #brower.find_element_by_xpath('//span[@class="splitTags"][text()="%s"]' % flag).click()
+    time.sleep(1)
     brower.find_element_by_xpath('//*[@id="group-btn-group-ok"]').click()  # 点击ok按钮
+
+def __ding_flag(brower,flag):
+    brower.find_element_by_xpath('//*[@id="search_group"]').clear()
+    brower.find_element_by_xpath('//*[@id="search_group"]').send_keys(flag)
+    brower.find_element_by_xpath('//*[@id="btn_search"]').click()
+    __add_flag(brower,"自动标签",flag)
+    brower.find_element_by_xpath('//span[@class="splitTags"][text()="%s"]' % flag).click()
+
+def __add_flag(brower:webdriver.Chrome,group,flag):
+    '''
+    增加一个标签
+    入口条件网页进入到标签编辑状态，出口情况,位于标签编辑状态
+    :param brower:
+    :param group:标签所属组
+    :param flag:标签名
+    :return:
+    '''
+    try:
+        WebDriverWait(brower, 1).until(EC.presence_of_element_located((By.XPATH, '//span[@class="splitTags"][text()="%s"]' % flag)))
+    except:
+        brower.find_element_by_xpath('//*[@id="search_group"]').clear()
+        brower.find_element_by_xpath('//*[@id="btn_search"]').click()
+        brower.find_element_by_xpath('//a[@class="edit"]').click()
+        brower.find_element_by_xpath('//span[@class="createfGroupType splitTags"]//a').click()
+        brower.find_element_by_xpath('//input[@class="layui-layer-input"]').send_keys(group)
+        brower.find_element_by_xpath('//a[@class="layui-layer-btn0"]').click()
+        try:
+            brower.find_element_by_xpath('//*[@id="popup_ok"]').click()
+        except:
+            print("")
+        brower.find_element_by_xpath('//td[@class="grouptype"][text()="%s"]/..//a[text()="+"]' % group).click()
+        brower.find_element_by_xpath('//input[@class="layui-layer-input"]').send_keys(flag)
+        brower.find_element_by_xpath('//a[@class="layui-layer-btn0"]').click()
+        brower.find_element_by_xpath('//a[@class="cancel"]').click()
+        brower.find_element_by_xpath('//*[@id="search_group"]').clear()
+        brower.find_element_by_xpath('//*[@id="search_group"]').send_keys(flag)
+        brower.find_element_by_xpath('//*[@id="btn_search"]').click()
 def out_demo_file(path):
 
     '''
@@ -89,7 +129,7 @@ def out_demo_file(path):
     '''
     wb = openpyxl.Workbook()
     sheet = wb.active
-    sheet.cell(1,1,"资产编号")
+    sheet.cell(1,1,"查询字段")
     sheet.cell(1,2,"标签")
     sheet.cell(2,1,"SH-A-02")
     sheet.cell(2,2,"封号,故障")

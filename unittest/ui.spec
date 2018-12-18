@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['ui.py'],
-             pathex=['C:\\Users\\yk690\\OneDrive\\×ÀÃæ\\test\\unittest'],
+             pathex=['C:\\Users\\yk690\\OneDrive\\×ÀÃæ\\´úÂë\\test\\unittest'],
              binaries=[],
              datas=[],
              hiddenimports=[],

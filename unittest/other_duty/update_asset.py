@@ -48,7 +48,6 @@ def out_demo_file(path):
     sheet.cell(2,2,"1792")
     sheet.cell(2,4,"http://console.zy.youkedao.com/ykdweb//ykd/asset/update")
     sheet.cell(2,5,"自营环境")
-    #
     sheet.cell(3, 1, "99000740060892")
     sheet.cell(3, 2, "1792")
     sheet.cell(3, 4, "http://console.yk.yijuchelian.com/ykdweb//ykd/asset/update")
