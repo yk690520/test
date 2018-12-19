@@ -1,13 +1,13 @@
 #此为功能的一个集合
 #打标签功能
-from other_duty import create_flag, ding_flags_for_wechat, recharge, get_momo_picture, get_sign, update_asset,qr_distribution
+from other_duty import create_flag, ding_flags_for_wechat, recharge, get_momo_picture, get_sign, update_asset,qr_distribution,download_picture
 from airtest.core.android.constant import (DEFAULT_ADB_PATH, IP_PATTERN,
                                            SDK_VERISON_NEW)
 import os,logging,shutil
 logger=logging.Logger(__name__,logging.WARNING)
 while True:
     os.system("cls")
-    print("请输入你要执行的功能：")
+    print("请输入你要执行的功能(v1.0)：")
     print("【1】打标签")
     print("【2】更新资产编号")
     print("【3】生成签名")
@@ -15,7 +15,9 @@ while True:
     print("【5】创建标签")
     print("【6】给手机充话费")
     print("【7】分配二维码")
+    print("【8】根据链接下载图片")
     print("【0】退出")
+
     duty=input("请输入：")
     if duty=="1":
         os.system("cls")
@@ -257,6 +259,42 @@ while True:
                 else:
                     os.system("cls")
                     print("已处理完成，且生成了分配二维码结果.xlsx报告，欢迎查看")
+            elif choice == "0":
+                break
+            else:
+                os.system("cls")
+                continue
+    elif duty=="8":
+        os.system('cls')
+        while True:
+            print("欢迎进入下载图片界面")
+            print("【1】输出图片链接存储excel")
+            print("【2】开始下载图片")
+            print("【0】返回上一级")
+            choice = input("请选择：")
+            if not os.path.exists("%s\\图片" % os.getcwd()):
+                os.mkdir("%s\\图片" % os.getcwd())
+            path = os.getcwd()
+            save_path="%s\\图片" % os.getcwd()
+            if choice == "1":
+                download_picture.out_demo_file("%s/下载图片样例文件.xlsx" % path)
+                os.system("cls")
+                print("样例文件输出成功")
+            elif choice == "2":
+                os.system("cls")
+                print("请在此键入需要下载图片样例文件excl路径，如果使用样例文件，且未更改名字与位置，请直接回车")
+                tpath = input("请输入：")
+                try:
+                    if not tpath:
+                        download_picture.download_pic("%s/下载图片样例文件.xlsx" % path, "%s/下载图片结果.xlsx" % path,save_path)
+                    else:
+                        download_picture.download_pic(tpath, "%s/下载图片结果.xlsx" % path,save_path)
+                except BaseException as e:
+                    logger.exception(e)
+                    print("处理出错，错误信息已显示")
+                else:
+                    os.system("cls")
+                    print("已处理完成，且生成了增加标签结果.xlsx报告，欢迎查看")
             elif choice == "0":
                 break
             else:

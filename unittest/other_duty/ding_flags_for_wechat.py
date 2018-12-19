@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from other_duty.decorator.decorator import decorator_for_log_and_load_file
-
+import random
 @decorator_for_log_and_load_file(data_column=2,log_column_name=["资产编号","处理结果"])
 def ding_flags(sourcePath,logPath,*,data_list):
     will_ding_assert_list=data_list
@@ -88,7 +88,8 @@ def __ding_flag(brower,flag):
     brower.find_element_by_xpath('//*[@id="search_group"]').clear()
     brower.find_element_by_xpath('//*[@id="search_group"]').send_keys(flag)
     brower.find_element_by_xpath('//*[@id="btn_search"]').click()
-    __add_flag(brower,"自动标签",flag)
+    str(random.randint(1,9))
+    __add_flag(brower,"自动标签%s"% (str(random.randint(1,9)),),flag)
     brower.find_element_by_xpath('//span[@class="splitTags"][text()="%s"]' % flag).click()
 
 def __add_flag(brower:webdriver.Chrome,group,flag):
@@ -104,6 +105,7 @@ def __add_flag(brower:webdriver.Chrome,group,flag):
         WebDriverWait(brower, 1).until(EC.presence_of_element_located((By.XPATH, '//span[@class="splitTags"][text()="%s"]' % flag)))
     except:
         brower.find_element_by_xpath('//*[@id="search_group"]').clear()
+        brower.find_element_by_xpath('//*[@id="search_group"]').send_keys("自动标签")
         brower.find_element_by_xpath('//*[@id="btn_search"]').click()
         brower.find_element_by_xpath('//a[@class="edit"]').click()
         brower.find_element_by_xpath('//span[@class="createfGroupType splitTags"]//a').click()
@@ -112,7 +114,10 @@ def __add_flag(brower:webdriver.Chrome,group,flag):
         try:
             brower.find_element_by_xpath('//*[@id="popup_ok"]').click()
         except:
-            print("")
+            brower.find_element_by_xpath('//td[@class="grouptype"][text()="%s"]/..//a[text()="+"]' % group).click()
+            brower.find_element_by_xpath('//input[@class="layui-layer-input"]').send_keys(group)
+            brower.find_element_by_xpath('//a[@class="layui-layer-btn0"]').click()
+
         brower.find_element_by_xpath('//td[@class="grouptype"][text()="%s"]/..//a[text()="+"]' % group).click()
         brower.find_element_by_xpath('//input[@class="layui-layer-input"]').send_keys(flag)
         brower.find_element_by_xpath('//a[@class="layui-layer-btn0"]').click()
